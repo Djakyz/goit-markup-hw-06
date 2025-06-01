@@ -1132,7 +1132,7 @@ input {
 
 /* MOBILE MODAL MENU STYLES */
 @media screen and (max-width: 767px) {
-  .page-header {
+  /* .page-header {
     padding-top: 20px;
     padding-bottom: 14px;
   }
@@ -1172,12 +1172,11 @@ input {
   .mobile-menu-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 48px;
     position: absolute;
     width: 100%;
     height: 100%;
     padding-bottom: 40px;
+    justify-content: flex-end;
   }
 
   .mobile-menu-close-btn {
@@ -1196,6 +1195,20 @@ input {
   .mobile-menu-close-btn:focus {
     fill: var(--accent-color);
     border-color: var(--accent-color);
+  }
+
+  .mobile-menu-main-part-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .mobile-menu-nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-bottom: 168px;
   }
 
   .mobile-menu-nav-list-item:not(:last-child) {
@@ -1221,6 +1234,7 @@ input {
     flex-direction: column;
     justify-content: space-between;
     gap: 48px;
+    margin-top: auto;
   }
 
   .mobile-menu-address {
@@ -1272,6 +1286,136 @@ input {
   .mobile-menu-social-list-link:hover,
   .mobile-menu-social-list-link:focus {
     background-color: var(--hover-color);
+  } */
+
+  .mobile-menu-overlay {
+    background-color: var(--white-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity var(--primary-transition),
+      visibility var(--primary-transition);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .mobile-menu-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-top: 29px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 40px;
+  }
+
+  .mobile-navigation {
+    margin-bottom: 168px;
+  }
+
+  .mobile-nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11111;
+    letter-spacing: 0.02em;
+    color: var(--secondary-color);
+  }
+
+  .mobile-menu-bottom-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 48px;
+  }
+
+  .mobile-close-btn {
+    width: 24px;
+    height: 24px;
+    align-self: flex-end;
+    fill: var(--secondary-color);
+
+    border: 1px solid #0000001a;
+    border-radius: 50%;
+    line-height: 0;
+    transition: fill var(--primary-transition), var(--primary-transition);
+  }
+
+  .mobile-close-btn:hover,
+  .mobile-close-btn:focus {
+    fill: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+
+  .mobile-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--primary-color);
+    font-style: normal;
+  }
+
+  /* Reordering mobile menu contact info */
+  .mobile-menu-phone {
+    order: 1;
+  }
+
+  .mobile-menu-email {
+    order: 2;
+  }
+
+  .mobile-color-emulation {
+    color: var(--accent-color);
+  }
+
+  .mobile-color-emulation-link {
+    color: var(--hover-color);
+  }
+
+  .mobile-menu-social-icons {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    width: 280px;
+  }
+
+  .mobile-menu-social-item {
+    width: 40px;
+    height: 40px;
+  }
+
+  .mobile-menu-social-link {
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-menu-social-icon {
+    fill: var(--white-color);
   }
 }
 
@@ -1457,6 +1601,7 @@ input {
   }
 
   .callback-form-checkbox-label {
+    display: flex;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
