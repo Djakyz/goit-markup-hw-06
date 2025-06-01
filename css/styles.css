@@ -1187,6 +1187,16 @@ input {
     color: var(--secondary-color);
   }
 
+  .mobile-nav-item {
+    color: var(--secondary-color);
+    transition: color var(--primary-transition);
+  }
+
+  .mobile-nav-item:hover,
+  .mobile-nav-item:focus {
+    color: var(--hover-color);
+  }
+
   .mobile-menu-bottom-container {
     display: flex;
     flex-direction: column;
@@ -1261,6 +1271,11 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color var(--primary-transition);
+  }
+  .mobile-menu-social-link:hover,
+  .mobile-menu-social-link:focus {
+    background-color: var(--hover-color);
   }
 
   .mobile-menu-social-icon {
