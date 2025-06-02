@@ -1529,6 +1529,9 @@ input {
 
 /* TABLET MODAL FORM STYLES */
 @media screen and (min-width: 768px) {
+  .mobile-menu-overlay {
+    display: none;
+  }
   .modal {
     width: 408px;
     min-height: 584px;
@@ -1537,4 +1540,7 @@ input {
 
 /* DESCTOP MODAL FORM STYLES */
 @media screen and (min-width: 1168px) {
+  .mobile-menu-overlay {
+    display: none;
+  }
 }
