@@ -990,6 +990,7 @@ input {
     letter-spacing: 0.02em;
     display: block;
     width: 264px;
+    margin-bottom: 0;
   }
 
   .footer-logo {
@@ -1011,6 +1012,7 @@ input {
 
   .footer-social-wrapper {
     margin-right: 80px;
+    margin-bottom: 0;
   }
 
   .footer-social-title {
