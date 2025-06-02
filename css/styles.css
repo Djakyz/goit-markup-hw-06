@@ -972,7 +972,6 @@ input {
   .footer {
     padding-top: 100px;
     padding-bottom: 100px;
-    padding-left: 0;
     display: flex;
     flex-direction: row;
     align-items: baseline;
